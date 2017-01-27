@@ -21,10 +21,10 @@ UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S), Linux) #LINUX
 	ECHO_MESSAGE = "Linux"
-	LIBS = -lGL `pkg-config --static --libs glfw3`
+	LIBS = -lGL `pkg-config --static --libs glfw3` `pkg-config --static --libs glew`
 
-	CXXFLAGS = -I../../ -I../libs/gl3w `pkg-config --cflags glfw3`
-	CXXFLAGS += -Wall -Wformat
+	CXXFLAGS = -I../../ -I../libs/gl3w `pkg-config --cflags glfw3` `pkg-config --cflags glew`
+	CXXFLAGS += -Wall -Wformat -g
 	CFLAGS = $(CXXFLAGS)
 endif
 
@@ -43,7 +43,7 @@ ifeq ($(UNAME_S), MINGW64_NT-6.3)
    ECHO_MESSAGE = "Windows"
    LIBS = -lglfw3 -lgdi32 -lopengl32 -limm32
 
-   CXXFLAGS = -I../../ -I../libs/gl3w `pkg-config --cflags glfw3`
+   CXXFLAGS = -I../../ -I../libs/gl3w `pkg-config --cflags glfw3`  `pkg-config --cflags glew`
    CXXFLAGS += -Wall -Wformat
    CFLAGS = $(CXXFLAGS)
 endif

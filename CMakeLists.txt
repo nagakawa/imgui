@@ -10,6 +10,7 @@ SET(PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 SET(Imgui_library_SRCS
   ${PROJECT_SOURCE_DIR}/imgui.cpp
   ${PROJECT_SOURCE_DIR}/imgui_draw.cpp
+  ${PROJECT_SOURCE_DIR}/examples/opengl3_example/imgui_impl_glfw_gl3.cpp
 )
 
 include_directories(${PROJECT_BINARY_DIR})
