@@ -34,5 +34,5 @@ endif(NOT CMAKE_BUILD_TYPE)
 
 SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -std=c++14 -Wall -Wpedantic -Wextra -Werror -fno-builtin -Og -g")
 #SET(CMAKE_C_SHARED_LINKER_FLAGS_DEBUG "${CMAKE_SHARED_LINKER_FLAGS_DEBUG} -ffat-lto-objects -flto")
-SET(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -std=c++14 -Wall -Wpedantic -Wextra -Werror -fno-builtin -O3 -ffat-lto-objects -flto")
+SET(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -std=c++14 -Wall -Wpedantic -Wextra -fno-builtin -O3 -ffat-lto-objects -flto")
 SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -ffat-lto-objects -flto")
